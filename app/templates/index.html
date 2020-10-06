@@ -9,9 +9,13 @@
 <body>
     <header class="header">
         <div class="header__title">
-            Сложение 2 чисел
+            <h2>Сложение 2 чисел</h2>
         </div>
-
+        <form action={{ url_for('render_result') }} method="POST" class="header__form">
+            Enter first number: <input type="text" name="number1"><br>
+            Enter second number: <input type="text" name="number2"><br>
+            <input type="submit" value="Summa">
+        </form>
     </header>
 </body>
 </html>
