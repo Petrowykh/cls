@@ -16,7 +16,9 @@ def index():
 def render_result():
     number1 = request.form['number1']
     number2 = request.form['number2']
-    return "Summa: " + number1 + number2
+
+    summa = str(int(number1) + int(number2))
+    return render_template ('results.html', summa=summa)
 
 if __name__== '__main__':
     app.run(debug=True)
